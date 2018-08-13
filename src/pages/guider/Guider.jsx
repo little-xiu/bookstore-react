@@ -1,20 +1,23 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-
+import "./Guider.css";
 class Guider extends Component{
     render(){
         return (
             <div id="guider">
-            <div className="swiper-container" ref="swiper">
-                <div className="swiper-wrapper">
-                    <div className="swiper-slide">Slide 1</div>
-                    <div className="swiper-slide">Slide 2</div>
-                    <div className="swiper-slide">Slide 3</div>
+                <div className="swiper-container guide-swiper" ref="swiper">
+                    <div className="swiper-wrapper">
+                        <div className="swiper-slide">
+                            <img src="./imgs/3.jpg" alt=""/>
+                        </div>
+                        <div className="swiper-slide"><img src="./imgs/4.jpg" alt=""/></div>
+                        <div className="swiper-slide"><img src="./imgs/5.jpg" alt=""/></div>
+                        <div className="swiper-slide">
+                            <img src="./imgs/6.jpg" alt=""/>
+                            <span className="enter-btn" onClick={this.enterAppAction.bind(this)}>进入</span>
+                        </div>
+                    </div>
                 </div>
-                <div className="swiper-pagination"></div>
-            </div>
-                <h1>指引页面</h1>
-                <button onClick={this.enterAppAction.bind(this)}>进入</button>
             </div>
         )
     }
@@ -23,9 +26,8 @@ class Guider extends Component{
         this.props.onEnter();
     }
     componentDidMount () {
-        /*this.swiper = new Swiper (this.refs.swiper,{
-
-        })*/
+        this.swiper = new window.Swiper (this.refs.swiper,{
+        })
     }
 }
 

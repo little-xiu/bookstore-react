@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
-
+import Header from "../../components/header.jsx"
 class Mine extends Component{
     render(){
         return (
             <div id="mine" className="page">
-                <h1>我的</h1>
+                <Header showBack>我的</Header>
             </div>
         )
     }

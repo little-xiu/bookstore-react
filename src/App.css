@@ -56,3 +56,10 @@ a.pub-link {
   height:0;
   font-size: 0;
 }
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 49px;
+  width: 100%;
+}
